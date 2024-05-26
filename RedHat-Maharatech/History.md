@@ -25,6 +25,14 @@ history -c
 ```
 This command clears the entire command history list.
 
+### Run a Command from History
+Suppose you want to rerun a command from history, you can use the `!` operator followed by the command number. For example, to rerun the command with number 5 from history, you can type:
+```bash
+!<num>
+```
+Replace `<num>` with the index of the command you want to run.
+This will execute the command indexed as 5 in the command history.
+
 ## Command Options
 
 - `-c`: Clear the history list by deleting all of the entries.
@@ -56,6 +64,13 @@ This command will display the last 10 commands in the history list.
 history -c
 ```
 This command will clear the entire command history list.
+
+### Run a Command from History
+Suppose you want to rerun a command from history, you can use the `!` operator followed by the command number. For example, to rerun the command with number 5 from history, you can type:
+```bash
+!5
+```
+This will execute the command indexed as 5 in the command history.
 
 ## Conclusion
 The `history` command is a useful utility for viewing and managing the command history in Linux. It provides various options for displaying, limiting, and clearing the command history list, making it an essential tool for command-line users.
