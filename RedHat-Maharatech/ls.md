@@ -83,11 +83,11 @@ ls -ltr
 ```
 This command will list all files in the current directory sorted by modification time, with the newest files first.
 
-### List Files Sorted by Modification Time (Newest First, No Details)
+### List Files in Reverse Order (Recursively)
 ```bash
-ls -lt
+ls -lr
 ```
-This command will list all files in the current directory sorted by modification time, with the newest files first, without detailed information.
+This command will list all files in the current directory and its subdirectories recursively, in reverse order.
 
 ## Conclusion
 
