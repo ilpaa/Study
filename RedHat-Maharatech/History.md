@@ -31,7 +31,7 @@ Suppose you want to rerun a command from history, you can use the `!` operator f
 !<num>
 ```
 Replace `<num>` with the index of the command you want to run.
-This will execute the command indexed <num> in the command history.
+This will execute the command indexed `<num>` in the command history.
 
 ## Command Options
 
