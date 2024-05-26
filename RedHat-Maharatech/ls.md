@@ -71,6 +71,24 @@ ls -R
 ```
 This command will list all files in the current directory and its subdirectories recursively.
 
+### List All Files with Detailed Information (Including Hidden)
+```bash
+ls -la
+```
+This command will list all files, including hidden files, in the current directory with detailed information.
+
+### List Files Sorted by Modification Time (Newest First)
+```bash
+ls -ltr
+```
+This command will list all files in the current directory sorted by modification time, with the newest files first.
+
+### List Files Sorted by Modification Time (Newest First, No Details)
+```bash
+ls -lt
+```
+This command will list all files in the current directory sorted by modification time, with the newest files first, without detailed information.
+
 ## Conclusion
 
 The `ls` command is a powerful tool for listing files and directories in Linux. By using various options, you can customize the output to suit your needs and efficiently manage your filesystem.
