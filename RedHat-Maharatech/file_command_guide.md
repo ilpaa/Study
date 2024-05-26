@@ -41,6 +41,16 @@ file example.txt
 ```
 This command will output the file type of `example.txt`.
 
+```bash
+file /home
+```
+This command will output the file type of `/home` which is a Directory.
+
+```bash
+file /etc/passwd
+```
+This command will output the file type of `/etc/passwd` which is a Ascii text.
+
 ### Check the MIME Type of a File
 ```bash
 file --mime example.txt
