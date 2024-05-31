@@ -65,6 +65,13 @@ This command creates a soft link named `linked_directory` pointing to `/path/to/
 | Directories       | Cannot link directories                | Can link directories             |
 | Independence      | Independent of original file's location| Dependent on original file's location |
 | Data Integrity    | Maintains data even if original is deleted | Breaks if original is deleted or moved |
+| Link Count        | Increases link count of the inode      | Does not affect link count       |
+| Target Type       | Only files                             | Files and directories            |
+| Creation Impact   | More storage efficient                 | Less storage efficient           |
+
+### Additional Notes
+- Hard links cannot point to directories, while soft links can.
+- Soft links can point to files or directories across different filesystems.
 
 ## Examples
 
