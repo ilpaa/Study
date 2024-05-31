@@ -8,14 +8,16 @@ Wildcards are special characters that can be used to represent one or more chara
 
 ## Wildcard Table
 
-| Wildcard     | Description                                                   | Example Usage                             | Matches                   | Does Not Match           |
-|--------------|---------------------------------------------------------------|-------------------------------------------|---------------------------|--------------------------|
-| `*`          | Matches zero or more characters                               | `ls *.txt`                                | `file.txt`, `report.txt`  | `filetxt`, `txtfile`     |
-| `?`          | Matches exactly one character                                 | `ls file?.txt`                            | `file1.txt`, `file2.txt`  | `file10.txt`, `file.txt` |
-| `[]`         | Matches any one of the enclosed characters                    | `ls file[123].txt`                        | `file1.txt`, `file2.txt`  | `file4.txt`, `file12.txt`|
-| `[a-d]`      | Matches any one character in the specified range (a to d)     | `ls file[a-d].txt`                        | `filea.txt`, `fileb.txt`  | `filee.txt`, `fileg.txt` |
-| `[^]`        | Matches any one character not enclosed                        | `ls file[^0-9].txt`                       | `filea.txt`, `fileb.txt`  | `file1.txt`, `file2.txt` |
-| `{}`         | Matches any one of the comma-separated patterns               | `ls file{1,2,3}.txt`                      | `file1.txt`, `file2.txt`  | `file4.txt`, `file12.txt`|
+| Wildcard         | Description                                                   | Example Usage                             | Matches                   | Does Not Match           |
+|------------------|---------------------------------------------------------------|-------------------------------------------|---------------------------|--------------------------|
+| `*`              | Matches zero or more characters                               | `ls *.txt`                                | `file.txt`, `report.txt`  | `filetxt`, `txtfile`     |
+| `?`              | Matches exactly one character                                 | `ls file?.txt`                            | `file1.txt`, `file2.txt`  | `file10.txt`, `file.txt` |
+| `[]`             | Matches any one of the enclosed characters                    | `ls file[123].txt`                        | `file1.txt`, `file2.txt`  | `file4.txt`, `file12.txt`|
+| `[a-d]`          | Matches any one character in the specified range (a to d)     | `ls file[a-d].txt`                        | `filea.txt`, `fileb.txt`  | `filee.txt`, `fileg.txt` |
+| `[^]`            | Matches any one character not enclosed                        | `ls file[^0-9].txt`                       | `filea.txt`, `fileb.txt`  | `file1.txt`, `file2.txt` |
+| `{}`             | Matches any one of the comma-separated patterns               | `ls file{1,2,3}.txt`                      | `file1.txt`, `file2.txt`  | `file4.txt`, `file12.txt`|
+| `[[::anumeric]]` | Matches any alphanumeric character                            | `ls file[[::anumeric]].txt`               | `file1.txt`, `filea.txt`  | `file-!.txt`, `file#.txt`|
+| `[[::uppercase]]`| Matches any uppercase letter                                  | `ls file[[::uppercase]].txt`              | `fileA.txt`, `fileB.txt`  | `filea.txt`, `file1.txt` |
 
 ## Wildcard Usage and Examples
 
@@ -108,6 +110,36 @@ This command matches `doc4.pdf`, `doc5.pdf`, etc., but not `doc1.pdf`, `doc2.pdf
 ls report_{final,draft,review}.pdf
 ```
 This command matches `report_final.pdf`, `report_draft.pdf`, and `report_review.pdf`.
+
+### `[[::anumeric]]` (Alphanumeric)
+
+- **Function**: Matches any alphanumeric character.
+- **Usage**:
+  ```bash
+  ls file[[::anumeric]].txt
+  ```
+  This command matches `file1.txt`, `filea.txt`, etc.
+
+#### Example
+```bash
+ls doc[[::anumeric]].pdf
+```
+This command matches `doc1.pdf`, `doca.pdf`, etc.
+
+### `[[::uppercase]]` (Uppercase)
+
+- **Function**: Matches any uppercase letter.
+- **Usage**:
+  ```bash
+  ls file[[::uppercase]].txt
+  ```
+  This command matches `fileA.txt`, `fileB.txt`, etc.
+
+#### Example
+```bash
+ls doc[[::uppercase]].pdf
+```
+This command matches `docA.pdf`, `docB.pdf`, etc.
 
 ## Examples of Combining Wildcards
 
