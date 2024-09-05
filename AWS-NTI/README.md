@@ -50,29 +50,11 @@ The architecture consists of:
    - Set **VPC endpoints** to `None`.
    - Keep both **DNS hostnames** and **DNS resolution** enabled.
 
-
-### 2. Configure Route Tables
-- Public subnets should route `0.0.0.0/0` traffic through the Internet Gateway.
+Once the creation is complete, choose ![image](https://github.com/user-attachments/assets/fad0bca4-6870-4334-8e86-582e04b71f37)
 
 
-### 3. Create Security Group
-- Create a security group allowing inbound HTTP (port 80) traffic from anywhere.
+The wizard will have provisioned a VPC with a public subnet and a private subnet in one Availability Zone, with route tables for each subnet. It will also have created an Internet Gateway. To view the settings of these resources, browse through the VPC console links, such as the **Subnets** link to view subnet details or the **Route tables** link to view the route table details.
 
-### 4. Launch EC2 Instance
-- Launch an EC2 instance in one of the public subnets.
-- Choose Amazon Linux as the AMI and a `t2.micro` instance type.
-- Attach the previously created security group.
+![image](https://github.com/user-attachments/assets/0c62f86e-5126-48da-a1a7-a9218e1095c9)
 
-### 5. Deploy Website
-- Connect to the EC2 instance via SSH.
-- Install Apache Web Server:
-  ```bash
-  sudo yum update -y
-  sudo yum install -y httpd
-  sudo systemctl start httpd
-  sudo systemctl enable httpd
-Upload your website files to /var/www/html/ directory:
-bash
-Copy code
-sudo cp -r /path/to/your/website/* /var/www/html/
-Verify the website by entering the EC2 instance's public DNS in the browser.
+
