@@ -23,13 +23,33 @@ The architecture consists of:
 - A custom web page hosted on the EC2 instance
 
 ## Steps
-### 1. Create a Custom VPC
-- Navigate to the VPC dashboard and create a new VPC.
-- Specify a CIDR block for the VPC (e.g., `10.0.0.0/16`).
-- Add public and private subnets with CIDR blocks:
-  - Public Subnet (AZ 1a): `10.0.0.0/24`
+### Creating a VPC
 
-- Attach an Internet Gateway.
+![image](https://github.com/user-attachments/assets/463274f5-9efe-4123-b103-7975806bac77)
+
+1. **Begin creating a VPC**:
+   - In the top-right of the screen, verify that **N. Virginia (us-east-1)** is the region.
+   - Choose the **VPC dashboard** link, located toward the top left of the console.
+   - Next, choose ![image](https://github.com/user-attachments/assets/6445f67e-8790-42aa-9066-d906c0d9258e)
+.
+     - _Note: If you do not see a button with that name, choose the **Launch VPC Wizard** button instead._
+
+2. **Configure the VPC details in the VPC settings panel**:
+   - Choose **VPC and more**.
+   - Under **Name tag auto-generation**, keep **Auto-generate** selected, but change the value from `project` to `lab`.
+   - Keep the **IPv4 CIDR block** set to `10.0.0.0/16`.
+   - For **Number of Availability Zones**, choose `1`.
+   - For **Number of public subnets**, keep the setting as `1`.
+   - For **Number of private subnets**, keep the setting as `0`.
+
+3. **Expand the Customize subnets CIDR blocks section**:
+   - Change **Public subnet CIDR block** in `us-east-1a` to `10.0.0.0/24`.
+
+4. **Set other options**:
+   - Set **NAT gateways** to `None`.
+   - Set **VPC endpoints** to `None`.
+   - Keep both **DNS hostnames** and **DNS resolution** enabled.
+
 
 ### 2. Configure Route Tables
 - Public subnets should route `0.0.0.0/0` traffic through the Internet Gateway.
