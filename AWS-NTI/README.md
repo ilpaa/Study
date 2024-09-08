@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/84e4c407-ac23-4573-a056-de07cf0b25c3)# AWS VPC Web Server Hosting
+# AWS VPC Web Server Hosting
 
 ## Overview
 This project demonstrates how to create a custom AWS Virtual Private Cloud (VPC) to host a website. The VPC includes public and private subnets across multiple availability zones. An EC2 instance is launched in the public subnet, and a security group is configured to allow HTTP traffic for website hosting.
@@ -138,6 +138,4 @@ After your EC2 instance has launched and the script has run, you can test the we
   - Recheck the script in the **User Data** section for any errors.
 
 This test confirms that your web server is running correctly and serving the web application as expected.
-
-
 
