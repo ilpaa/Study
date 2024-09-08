@@ -7,7 +7,7 @@
 4. [Steps](#steps)
     - [Creating a VPC](#creating-a-vpc)
     - [Launching an EC2 Instance and Hosting a Web Application](#launching-an-ec2-instance-and-hosting-a-web-application)
-5. [Testing the Web Server](#testing-the-web-server)
+5. [Testing the Web Server](#Test-the-Web-Server)
 6. [Troubleshooting](#troubleshooting)
 
 ---
