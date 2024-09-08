@@ -60,12 +60,13 @@ The architecture consists of:
    - Set **NAT gateways** to `None`.
    - Set **VPC endpoints** to `None`.
    - Keep both **DNS hostnames** and **DNS resolution** enabled.
+     ![VPC Configuration](https://github.com/user-attachments/assets/0c62f86e-5126-48da-a1a7-a9218e1095c9)
 
    Once the creation is complete, choose ![Complete VPC Creation](https://github.com/user-attachments/assets/fad0bca4-6870-4334-8e86-582e04b71f37).
 
    The wizard will have provisioned a VPC with a public subnet and a private subnet in one Availability Zone, with route tables for each subnet. It will also have created an Internet Gateway. To view the settings of these resources, browse through the VPC console links, such as the **Subnets** link to view subnet details or the **Route tables** link to view the route table details.
 
-   ![VPC Configuration](https://github.com/user-attachments/assets/0c62f86e-5126-48da-a1a7-a9218e1095c9)
+   
 
 ### Launching an EC2 Instance and Hosting a Web Application
 
