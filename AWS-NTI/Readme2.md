@@ -120,5 +120,35 @@ The architecture consists of:
 
    # Create a simple web page
    echo "<html><body><h1>Welcome to My Web Application</h1></body></html>" > /var/www/html/index.html
+   ```
 
-  ```
+Next Choose, ![image](https://github.com/user-attachments/assets/b4a8621f-5c83-45b8-b59b-c355dffc9113)
+
+
+## Test the Web Server
+After your EC2 instance has launched and the script has run, you can test the web server to ensure everything is working correctly.
+
+### Steps to Test:
+
+1. **Obtain the Public IP Address:**
+   - Navigate to the **EC2 Dashboard**.
+   - Select your instance and find the **Public IPv4 address** in the instance details.
+![Screenshot 2024-09-08 185841](https://github.com/user-attachments/assets/00a4972a-f1b8-427c-83b6-1ffc199014a4)
+
+
+2. **Access the Web Application:**
+   - Open a web browser.
+   - Enter the public IP address of your EC2 instance in the address bar (e.g., `http://your-public-ip`).
+
+3. **Verify the Web Page:**
+   - If the setup was successful, you should see a webpage displaying: `Welcome to My Web Application`.
+
+### Troubleshooting:
+- If the webpage doesn't load:
+  - Verify that your security group allows HTTP traffic on port 80.
+  - Ensure the instance is running and accessible.
+  - Recheck the script in the **User Data** section for any errors.
+
+This test confirms that your web server is running correctly and serving the web application as expected.
+
+
