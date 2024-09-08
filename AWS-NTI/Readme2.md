@@ -119,7 +119,7 @@ The architecture consists of:
    systemctl enable httpd
 
    # Create a simple web page
-   echo "<html><body><h1>Welcome to My Web Application</h1></body></html>" > /var/www/html/index.html
+   echo "<html><body><h1>Hello From Your Web Server!</h1></body></html>" > /var/www/html/index.html
    ```
 
 Next Choose, ![image](https://github.com/user-attachments/assets/b4a8621f-5c83-45b8-b59b-c355dffc9113)
@@ -141,7 +141,9 @@ After your EC2 instance has launched and the script has run, you can test the we
    - Enter the public IP address of your EC2 instance in the address bar (e.g., `http://your-public-ip`).
 
 3. **Verify the Web Page:**
-   - If the setup was successful, you should see a webpage displaying: `Welcome to My Web Application`.
+   - If the setup was successful, you should see a webpage displaying: `Hello From Your Web Server!`.
+     ![image](https://github.com/user-attachments/assets/5553be7e-6a59-4f70-ae21-f7f8162523cb)
+
 
 ### Troubleshooting:
 - If the webpage doesn't load:
