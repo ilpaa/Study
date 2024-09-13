@@ -6,11 +6,10 @@ In Linux, input/output redirection is used to control where commands get their i
 
 ## Standard Input, Output, and Error
 
-  ![image](https://github.com/user-attachments/assets/3199ff49-f3f1-4077-9991-d4338e7198de)
-
 - **Standard Input (stdin)**: Input stream (keyboard or file) — file descriptor `0`.
 - **Standard Output (stdout)**: Output stream (usually the terminal) — file descriptor `1`.
 - **Standard Error (stderr)**: Error messages stream — file descriptor `2`.
+  ![image](https://github.com/user-attachments/assets/3199ff49-f3f1-4077-9991-d4338e7198de)
 
 ## Redirection Symbols
 
