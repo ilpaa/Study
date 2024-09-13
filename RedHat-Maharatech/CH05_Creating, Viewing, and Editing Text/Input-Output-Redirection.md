@@ -1,10 +1,8 @@
 # Input/Output Redirection in Linux
 
 ## Overview
-![image](https://github.com/user-attachments/assets/c1f0aea9-5104-44ed-9cac-2e1c562723e3)
-
-
 In Linux, input/output redirection is used to control where commands get their input and where they send their output. This allows users to manipulate the flow of data between files, commands, and devices.
+![image](https://github.com/user-attachments/assets/c1f0aea9-5104-44ed-9cac-2e1c562723e3)
 
 ## Standard Input, Output, and Error
 
