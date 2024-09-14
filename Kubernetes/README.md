@@ -1,3 +1,22 @@
+# Kubernetes Architecture and Networking Challenges
+This repository provides a comprehensive overview of Kubernetes architecture, detailing the roles of its control plane and worker nodes. It delves into the intricacies of Kubernetes' core components, explaining how they interact to manage containerized applications effectively. Additionally, this documentation explores the complex networking challenges that arise in Kubernetes environments and the solutions implemented to address them.
+
+Through detailed explanations and illustrations, this guide aims to demystify Kubernetes for both beginners and seasoned practitioners, offering valuable insights into its inner workings and best practices for cluster management.
+
+# Table of Contents
+- [Kubernetes Architecture](#kubernetes-architecture)
+  - [Control Plane Node Overview](#control-plane-node-overview)
+  - [Importance of the Control Plane](#importance-of-the-control-plane)
+  - [Persisting Cluster State](#persisting-cluster-state)
+  - [Control Plane Node Components](#control-plane-node-components)
+- [Worker Node Components](#worker-node-components)
+  - [Container Runtime](#container-runtime)
+  - [Node Agent - kubelet](#node-agent---kubelet)
+  - [kubelet - CRI Shims](#kubelet---cri-shims)
+  - [Proxy - kube-proxy](#proxy---kube-proxy)
+  - [Add-ons](#add-ons)
+- [Networking Challenges in Kubernetes](#networking-challenges-in-kubernetes)
+
 # Kubernetes Architecture
 
 ## At a very high level, Kubernetes is a cluster of compute systems categorized by their distinct roles:
