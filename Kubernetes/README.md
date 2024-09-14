@@ -1,10 +1,10 @@
 # Kubernetes Architecture
 
 ## At a very high level, Kubernetes is a cluster of compute systems categorized by their distinct roles:
+![bpcsp24duwc1-TrainingImage](https://github.com/user-attachments/assets/86fbd27a-e3a0-4c32-ad5a-06854e6c8a14)
 
 - One or more control plane nodes
 - One or more worker nodes (optional, but recommended).
-![bpcsp24duwc1-TrainingImage](https://github.com/user-attachments/assets/86fbd27a-e3a0-4c32-ad5a-06854e6c8a14)
 
 
 # Kubernetes Control Plane Node Overview
@@ -173,5 +173,47 @@ Add-ons provide additional cluster features not available by default in Kubernet
 ---
 
 This overview of worker node components highlights the importance of the container runtime, the role of the `kubelet`, network management with `kube-proxy`, and additional functionality provided by add-ons.
+
+
+# Networking Challenges in Kubernetes
+
+Decoupled, microservices-based applications rely heavily on networking to simulate the tight coupling found in monolithic applications. Networking can be complex to understand and implement, and Kubernetes is no exception. As a microservices orchestrator, Kubernetes addresses several key networking challenges:
+
+1. **Container-to-Container communication inside Pods**
+2. **Pod-to-Pod communication on the same node and across cluster nodes**
+3. **Service-to-Pod communication within the same namespace and across namespaces**
+4. **External-to-Service communication for client access to applications in a cluster**
+
+These challenges must be resolved using Kubernetes and its plugins.
+
+## Networking Challenges Breakdown
+
+### 1. Container-to-Container Communication inside Pods
+
+When a container runtime starts a container, it creates an isolated network space called a **network namespace** using the host operating system's kernel virtualization features. On Linux, this network namespace can be shared between containers or with the host OS.
+
+- In Kubernetes, when a Pod (a group of containers) is created, a **Pause container** is initialized. This container creates a network namespace that all other containers within the Pod share.
+- By sharing the network namespace of the Pause container, the containers in the Pod can communicate with each other using `localhost`.
+
+### 2. Pod-to-Pod Communication Across Nodes
+
+Kubernetes allows Pods to be scheduled on nodes in an unpredictable manner. However, every Pod must be able to communicate with any other Pod in the cluster without using Network Address Translation (NAT). This is a fundamental requirement of Kubernetes networking.
+
+- The Kubernetes networking model, often called **"IP-per-Pod"**, gives each Pod a unique IP address, similar to virtual machines (VMs) on a network.
+- Inside each Pod, containers share the Pod's network namespace and coordinate port assignments, enabling communication via `localhost`.
+- **Container Network Interface (CNI):** Kubernetes uses CNI plugins to integrate containers into the overall network model. CNI is a set of specifications and libraries that allow plugins to configure container networking.
+  - The container runtime delegates IP assignment to CNI, which then connects to a plugin (e.g., Bridge or MACvlan) to acquire an IP address.
+  - Some popular CNI plugins include Flannel, Weave, Calico, and Cilium. These plugins implement the Kubernetes networking model and often provide support for network policies.
+
+![83mpgq3bdu09-ContainerNetworkInterfaceCNICorePlugins2023](https://github.com/user-attachments/assets/c7de73e3-f8a7-406f-b0ee-3a4da2981f38)
+
+For more detailed information, refer to the [Kubernetes documentation](https://kubernetes.io/docs/).
+
+### 3. External-to-Pod Communication
+
+To allow external access to applications running in Pods, Kubernetes uses **Services**. These services encapsulate network routing rules, which are stored in `iptables` on cluster nodes and managed by `kube-proxy` agents.
+
+- By exposing services using `kube-proxy`, Kubernetes makes the application accessible outside the cluster via a virtual IP address and a dedicated port.
+
 
 
