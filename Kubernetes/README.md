@@ -1,5 +1,6 @@
-##Kubernetes Architecture
-#At a very high level, Kubernetes is a cluster of compute systems categorized by their distinct roles:
+## Kubernetes Architecture
+
+# At a very high level, Kubernetes is a cluster of compute systems categorized by their distinct roles:
 
 - One or more control plane nodes
 - One or more worker nodes (optional, but recommended).
