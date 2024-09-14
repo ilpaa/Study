@@ -5,10 +5,9 @@ Through detailed explanations and illustrations, this guide aims to demystify Ku
 
 # Table of Contents
 - [Kubernetes Architecture](#kubernetes-architecture)
-  - [Control Plane Node Overview](#control-plane-node-overview)
+  - [Control Plane Node Components](#control-plane-node-components)
   - [Importance of the Control Plane](#importance-of-the-control-plane)
   - [Persisting Cluster State](#persisting-cluster-state)
-  - [Control Plane Node Components](#control-plane-node-components)
 - [Worker Node Components](#worker-node-components)
   - [Container Runtime](#container-runtime)
   - [Node Agent - kubelet](#node-agent---kubelet)
