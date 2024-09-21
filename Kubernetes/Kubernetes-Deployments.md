@@ -102,8 +102,8 @@ Both the YAML and JSON files can be loaded into the cluster using the following 
 
 ## Deployment Status
 
-Once the Deployment object is created, Kubernetes attaches the status field to it and populates it with necessary information. For example, a new Deployment creates ReplicaSet A, which then creates 3 Pods, each configured to run one instance of the `nginx:1.20.2` container image. This state is recorded as Revision 1.
-![g7f3nyhbhcr2-DeploymentReplicaSetBCreated](https://github.com/user-attachments/assets/600b0bac-8907-45ff-8e35-8143fae744d1
+Once the Deployment object is created, Kubernetes attaches the status field to it and populates it with necessary information. For example, a new Deployment creates ReplicaSet A, which then creates 3 Pods, each configured to run one instance of the `nginx:1.20.2` container image. This state is recorded as Revision 1
+![image](https://github.com/user-attachments/assets/600b0bac-8907-45ff-8e35-8143fae744d1)
 
 
 ## Deployment Operations
