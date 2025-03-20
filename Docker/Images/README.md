@@ -422,6 +422,3 @@ docker import mycontainer.tar myimage:latest
 
 Docker images are essential for containerized applications. This guide covers all commands to pull, build, manage, inspect, and remove images. For more details, refer to the official [Docker documentation](https://docs.docker.com/). 📘
 
----
-
-Let me know if you'd like further refinements or additional sections! 🚀
