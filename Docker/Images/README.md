@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/413c6cdc-1d3b-4c02-ab31-a555b1d0dc5c)
+![image](https://github.com/user-attachments/assets/59df94e9-c715-491a-b35d-d48cdf94a1e3)
 
 # Docker Image Commands
 
