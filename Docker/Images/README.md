@@ -30,7 +30,7 @@ This command pulls the latest version of the `nginx` image. 🐳
 
 ### Pull a Specific Version (Tag)
 
-![image](https://github.com/user-attachments/assets/8a07177c-38d1-4444-bd4f-23fef68f85a7)
+![image](https://github.com/user-attachments/assets/1e3bc752-2162-4a5a-a44a-89b8409fd6ed)
 
 To pull a specific version of an image, use:
 
@@ -124,7 +124,7 @@ docker search mysql
 
 ### Build an Image from a Dockerfile
 
-![image](https://github.com/user-attachments/assets/3fb66df0-ec6f-4c81-ad35-89ebac5a8ff1)
+![image](https://github.com/user-attachments/assets/270a123e-d268-4b63-9002-b7c2e2547bd2)
 
 To create an image from a `Dockerfile`, use:
 
